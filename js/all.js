@@ -16,12 +16,18 @@ menuBtn.addEventListener('click',menuClose,false)
 $(document).ready(function () {
     $('.imgTaketurn').slick({
       autoplay: true,
-      // autoplaySpeed: 3000,
-      dots:true,
+      // dots:true,
       infinite:true,
-      speed:300,
+      speed:700,
       slidesToshow:1,
-      centerMode:true,
-      variablewidth:true,
+      // centerMode:true,
+      // variablewidth:true,
+      prevArrow: "<button type='button' class='slick-prev slick-arrow slickBtn''></button>",
+         nextArrow: "<button type='button' class='slick-next slick-arrow slickBtn''></button>",
     })
+    $('#gototopId').click(function(e){
+      e.preventDefault()
+      $('html,body').animate({scrollTop:0},555)
+    })
+    console.log(document.querySelector('#gototop'))
 });

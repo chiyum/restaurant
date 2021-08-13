@@ -6,7 +6,7 @@ img{vertical-align: top;border: none;}
 .wrap{
     overflow: hidden;
     position: relative;
-    height: 3000px;
+    height: 2500px;
 }
 .header{
     position: fixed;
@@ -23,6 +23,11 @@ img{vertical-align: top;border: none;}
     img{
         height: 50px;
         margin-left: 20px;
+    }
+    a{
+        width: 207px;
+        overflow: hidden;
+        white-space: nowrap;
     }
     .button{
         // position: absolute;
@@ -48,7 +53,6 @@ img{vertical-align: top;border: none;}
 
 .content{
     display: flex;
-    height: 700px;
     overflow: hidden;
     .nav.active{
         width: 0;
@@ -94,6 +98,12 @@ img{vertical-align: top;border: none;}
                     padding: 10px;
                 }
             }
+            div{
+                position: absolute;
+                left: 68px;
+                top: 410px;
+                font-size: 14px;
+            }
         }
     }//都使用定位，如此當介面縮小時，就不會隨之移動
     .main{
@@ -106,24 +116,216 @@ img{vertical-align: top;border: none;}
         transition: width 0.5s, left 0.5s;
         .imgTaketurn{
             margin: 0 auto;
-            width: 90%;
+            width: 90vw;
+            div{
+                width: 100%;
+                height: 550px;
+                img{
+                    margin: 0 auto;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .slickBtn{
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: #ffefcc;
+                z-index: 2;
+            }
+            .slick-prev::before,.slick-next::before{
+                color: black;
+                font-size: 25px;
+            }
+        }
+
+        .remenAnimation{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             img{
-                margin: 0 auto;
-                width: 99%;
-                height: 450px;
+                width: 60vw;
+            }
+            p{
+                position: relative;
+                bottom: 130px;
+                color:#fb6e1c ; //#fb6e1c橘 or #1d251b 黑
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .vapour{
+                position: relative;
+                display: flex;
+                z-index: 1;
+                padding:  0 20px;
+            }
+            .vapour span{
+                display: block;
+                position: relative;
+                top: 300px;
+                margin: 0 2px 50px;
+                min-width: 12px;
+                height: 120px;
+                border-radius: 50%;
+                background: white;
+                animation: animate 5s linear infinite;
+                opacity: 0;
+                filter: blur(8px);
+                animation-delay: calc(var(--i) * -0.5s);
+            }
+            @keyframes animate {
+                
+                0%{
+                    transform: translateY(0) scaleX(1);
+                    opacity: 0;
+                }
+                15%{
+                    opacity: 1;
+                }
+
+                50%{
+                    transform: translateY(-150px) scaleX(5);
+                }
+
+                95%{
+                    opacity: 0;
+                }
+
+                100%{
+                    transform: translateY(-300px) scaleX(10);
+                }
+
+            }
+        }
+
+        .menu{
+            padding: 50px 0;
+            background-color: white;
+            h3{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fb6e1c;
+                img{
+                    width: 50px;
+                }
+            }
+            .menulist{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                a{
+                    text-decoration: none;
+                    
+                    div{
+                        width: 24vw;
+                        img{
+                            width: 100%;
+                        }
+                        .ramen{
+                            margin-bottom: 5px;
+                        }
+                        p{
+                            padding: 3px;
+                            margin: 0 auto;
+                            width: 80%;
+                            text-align: center;
+                            color: white;
+                            font-weight: 500;
+                            line-height: 1.2;
+                            background: #fb6e1c;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+                a:visited{
+                    color: white;
+                }
+                a:link{
+                    color: white;
+                }
+                a:hover img{
+                    opacity: 0.5;
+                    transition: all 0.5s;
+                }
             }
         }
     }
-    .main.active{
-        width: calc(100% - 0px);
-        left: 0;
+        .main.active{
+            width: calc(100% - 0px);
+            left: 0;
+        }
+       
+}
+
+.footer{
+    display: flex;
+    color: #1d251b;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 30px;
+    width: 100vw;
+    background-color: white;
+    p{
+        position: relative;
+        right: 7%;
+    }
+    a{
+        position: relative;
+        right: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: black;
+        img{
+            width: 16px;
+        }
+    }
+    ul{
+        display: flex;
+        li{
+            a{
+                display: block;
+                padding: 0 5px;
+                width: auto;
+                height: auto;
+                text-decoration: none;
+                color: #1d251b;
+                border-radius: 0;
+                background-color: white;
+            }
+            a:link{
+                color: #1d251b;
+            }
+            a:visited{
+                color: #1d251b;
+            }
+            #rightborder{
+                border-right: solid 1px #c3c3c3;
+            }
+        }
     }
 }
+
+//切換介面
 @media (max-width:840px) {
     .content{
         .nav{
             left: 0;
             width: 100%;
+            ul{
+                div{
+                    left: 40vw;
+                    top: 410px;
+                }
+            }
         }
         //加上active以後才消失
         .nav.active{
@@ -133,10 +335,16 @@ img{vertical-align: top;border: none;}
         .main{
             left: 100%;
             width: 100%;
+            .imgTaketurn{
+                div{
+                    height: 300px;
+                }
+            }
         }
         .main.active{
             left: 0;
         }
+
     }
     //推擠的邏輯是這樣的，可以把ab當成一張圖然後分成一半
     //當觸發active的時候把a給推到螢幕前，當沒觸發的時候就把b推到螢幕前
@@ -151,3 +359,396 @@ img{vertical-align: top;border: none;}
 //實際上是左邊的nav也在縮小，同時右邊的main在放大。
 //使用絕對定位的原因是因nav是fixed，如不使用絕對定位的話，main會占滿版面
 //移動方面也不一定要使用，只要main定位從右邊開始就沒有太大問題。
+
+
+@media (max-width:1295px){
+
+    .wrap{
+        height: 2300px;
+    }
+    .content{
+
+        .main{
+            .remenAnimation{
+                .vapour{
+                    span{
+                        min-width: 9px;
+                    }
+                }
+            }
+        }
+
+    }
+    
+
+}
+
+
+@media (max-width:1080px){
+
+    .wrap{
+        height: 2000px;
+    }
+
+    .content{
+
+        .main{
+            .imgTaketurn{
+                div{
+                    height: 450px;
+                }
+            }
+            .remenAnimation{
+                p{
+                    font-size: 35px;
+                }
+             }
+        }
+
+    }
+    
+
+}
+
+@media (max-width:920px){
+
+    .wrap{
+        height: 1800px;
+    }
+
+    .content{
+
+        .main{
+            .remenAnimation{
+               p{
+                   bottom: 90px;
+                   text-align: center;
+               }
+            }
+            .imgTaketurn{
+                div{
+                    height: 350px;
+                }
+            }
+        }
+
+    }
+    
+
+}
+
+
+@media (max-width:820px){
+
+    .wrap{
+        height: 1600px;
+    }
+
+    .content{
+
+        .main{
+            .imgTaketurn{
+                div{
+                    height: 300px;
+                }
+            }
+        }
+
+    }
+    
+
+}
+
+
+@media (max-width:770px){
+
+    .wrap{
+        height: 2100px;
+    }
+
+    .content{
+
+        .main{
+            .menu{
+                .menulist{
+                    a{
+                        div{
+                            width: 45vw;
+                        }
+                    }
+                }
+            }
+            .remenAnimation{
+                .vapour{
+                    bottom: 20px;
+                }
+                p{
+                    font-size: 30px;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+    }
+    .footer{
+        p{
+            right: 10%;
+        }
+        ul{
+            position: relative;
+            right: 5%;
+        }
+    }
+
+}
+
+@media (max-width:670px){
+
+    .wrap{
+        height: 1950px;
+    }
+
+    .content{
+
+        .main{
+            .remenAnimation{
+                .vapour{
+                    bottom: 35px;
+                }
+            }
+        }
+
+    }
+    
+    .footer{
+        p{
+            right: 12%;
+        }
+        
+    }
+    
+}
+
+
+@media (max-width:620px){
+
+    .wrap{
+        height: 1900px;
+    }
+
+    .content{
+
+        .main{
+            .imgTaketurn{
+                width: 100vw;
+                div{
+                    height: 300px;
+                }
+                .slickBtn{
+                    width: 0;
+                    height: 0;
+                }
+            }
+            .remenAnimation{
+                .vapour{
+                    bottom: 55px;
+                    span{
+                        min-width: 7px;
+                    }
+                }
+                p{
+                    font-size: 25px;
+                    bottom: 60px;
+                }
+            }
+        }
+        
+
+    }
+    
+
+}
+
+
+@media (max-width:520px){
+
+    .wrap{
+        height: 1700px;
+    }
+
+    .content{
+
+        .nav{
+            ul{
+                div{
+                    left: 35vw;
+                }
+            }
+        }
+
+        .main{
+            .imgTaketurn{
+                div{
+                    height: 250px;
+                }
+            }
+            .menu{
+                .menulist{
+                    a{
+                        div{
+                            width: 48vw;
+                        }
+                    }
+                }
+            }
+            .remenAnimation{
+                .vapour{
+                    bottom: 65px;
+                    span{
+                        min-width: 6px;
+                    }
+                }
+            }
+        }
+
+    }
+    
+    .footer{
+        justify-content: space-evenly;
+        p{
+            right: 12%;
+            font-size: 15px;
+        }
+        ul{
+            display: none;
+        }
+        a{
+            right: 3%;
+        }
+    }
+
+}
+
+@media (max-width:460px){
+
+    .wrap{
+        height: 1600px;
+    }
+
+    .content{
+
+        .main{
+            .remenAnimation{
+                .vapour{
+                    bottom: 75px;
+                }
+            }
+        }
+
+    }
+    
+
+}
+
+
+@media (max-width:420px){
+
+    .wrap{
+        height: 1500px;
+    }
+
+    .content{
+
+        .nav{
+            ul{
+                div{
+                    left: 33vw;
+                }
+            }
+        }
+
+        .main{
+            .imgTaketurn{
+                div{
+                    height: 200px;
+                }
+            }
+            .menu{
+                .menulist{
+                    a{
+                        div{
+                            width: 45vw;
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .remenAnimation{
+                .vapour{
+                    bottom: 88px;
+                }
+                p{
+                    font-size: 22px;
+                    bottom: 40px;
+                }
+            }
+        }
+
+    }
+    
+    .footer{
+        a{
+            right: 4%;
+        }
+    }
+
+}
+
+@media (max-width:360px){
+
+    .wrap{
+        height: 1350px;
+    }
+
+    .content{
+
+        .nav{
+            ul{
+                div{
+                    left: 26vw;
+                }
+            }
+        }
+
+        .main{
+            .remenAnimation{
+                .vapour{
+                    bottom: 105px;
+                    span{
+                        min-width: 5px;
+                    }
+                }
+            }
+            .menu{
+                .menulist{
+                    a{
+                        div{
+                            p{
+                                font-size: 13.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+    }
+
+}   .footer{
+    a{
+        right: 6%;
+    }
+}
