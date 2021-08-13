@@ -1,0 +1,153 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+img{vertical-align: top;border: none;}
+
+// #ffefcc背景米黃 / #fb6e1c 字體橘色  / #1d251b 字體黑 / #a7755a 木頭淺 / #744b34 木頭深
+.wrap{
+    overflow: hidden;
+    position: relative;
+    height: 3000px;
+}
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    width: calc(100% - 0px);
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #744b34;
+    transition: width 0.5s, left 0.5s;
+    z-index: 100;
+    img{
+        height: 50px;
+        margin-left: 20px;
+    }
+    .button{
+        // position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 15px;
+        width: 30px;
+        height: 30px;
+        div{
+            height: 3px;
+            width: 30px;
+            // background-color: black;
+            background:url(../img/buttonbg.jpg);
+            border-radius: 10px;
+        }
+        .lineII{
+            height: 3.2px;
+        }
+    }
+}
+
+.content{
+    display: flex;
+    height: 700px;
+    overflow: hidden;
+    .nav.active{
+        width: 0;
+    }
+    .nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        border-right: #744b34 1px solid;
+        background: url(../img/bg1.png);
+        transition: all 0.5s;
+        overflow: hidden;
+        z-index: 99;
+        //此overflow用途是讓子元素消失
+        a{
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            color: #a7755a;
+        }
+        a:visited{
+            color: #a7755a;
+        }
+        a:link{
+            color: #a7755a;
+        }
+        a:hover{
+            color: #744b34;
+        }
+        ul{
+            position: relative;
+            left: 30px;
+            top: 0;
+            width: 100%;
+            white-space: nowrap;
+            li{
+                a{
+                    display: block;
+                    padding: 10px;
+                }
+            }
+        }
+    }//都使用定位，如此當介面縮小時，就不會隨之移動
+    .main{
+        position: absolute;
+        padding-top: 60px;
+        left: 300px;
+        height: 100%;
+        width: calc(100% - 300px);
+        background-color: #ffefcc;
+        transition: width 0.5s, left 0.5s;
+        .imgTaketurn{
+            margin: 0 auto;
+            width: 90%;
+            img{
+                margin: 0 auto;
+                width: 99%;
+                height: 450px;
+            }
+        }
+    }
+    .main.active{
+        width: calc(100% - 0px);
+        left: 0;
+    }
+}
+@media (max-width:840px) {
+    .content{
+        .nav{
+            left: 0;
+            width: 100%;
+        }
+        //加上active以後才消失
+        .nav.active{
+            width: 100%;
+            left: -100%;
+        }
+        .main{
+            left: 100%;
+            width: 100%;
+        }
+        .main.active{
+            left: 0;
+        }
+    }
+    //推擠的邏輯是這樣的，可以把ab當成一張圖然後分成一半
+    //當觸發active的時候把a給推到螢幕前，當沒觸發的時候就把b推到螢幕前
+    //當nav顯現的時候它在left:0的位置(螢幕前)，而這個時候main則是在left:100%
+    //也就是它從左邊推100%的畫面，而此時他是相連在nav旁邊的
+    //那當觸發active的時候它會從left:100%拉回left:0顯現在畫面正中央
+    //此時nav則是從原本的0往左拉100%，因為是left:-100%
+    //這樣一拉一推的情況就會顯現推擠的效果
+}
+
+//總結一下就是利用寬度的系統，讓main這個主畫面好像有吃掉左邊的nav
+//實際上是左邊的nav也在縮小，同時右邊的main在放大。
+//使用絕對定位的原因是因nav是fixed，如不使用絕對定位的話，main會占滿版面
+//移動方面也不一定要使用，只要main定位從右邊開始就沒有太大問題。
