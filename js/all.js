@@ -31,3 +31,11 @@ $(document).ready(function () {
     })
     console.log(document.querySelector('#gototop'))
 });
+
+//載入動畫
+// document.onreadystatechange =function(){
+//   let loading = document.querySelector('.planet')
+//   if(document.readyState == 'complete'){
+//       loading.classList.add('active')
+//   }
+// }
