@@ -312,10 +312,20 @@ img {
   color: #1d251b;
 }
 
-.content .main .inside .menu .list img {
-  width: 80%;
-  border: 1px solid;
+.content .main .inside .menu .list .commodity {
   margin-bottom: 50px;
+  width: 80%;
+}
+
+.content .main .inside .menu .list .commodity img {
+  border: 1px solid;
+  width: 100%;
+}
+
+.content .main .inside .menu .list .commodity p {
+  text-align: center;
+  color: red;
+  font-weight: 500;
 }
 
 .content .main .inside .about {
@@ -539,9 +549,9 @@ img {
   .content .main .inside .menu .list h3 {
     margin: 35px 0;
   }
-  .content .main .inside .menu .list img {
+  .content .main .inside .menu .list .commodity {
     width: 90%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
