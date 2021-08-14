@@ -385,7 +385,6 @@ img {
       justify-content: space-around;
   position: absolute;
   bottom: 0;
-  padding: 10px 30px;
   width: 100vw;
   background-color: white;
 }
@@ -408,13 +407,20 @@ img {
       -ms-flex-align: center;
           align-items: center;
   width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: black;
+  height: 35px;
+  background-color: #a7755a;
 }
 
 .footer a img {
   width: 16px;
+}
+
+.footer a i {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #744b34;
 }
 
 .footer ul {
@@ -442,8 +448,14 @@ img {
   color: #1d251b;
 }
 
-.footer ul li #rightborder {
-  border-right: solid 1px #c3c3c3;
+.footer ul .lineFt {
+  position: relative;
+  right: 3px;
+  top: 1.5px;
+  width: 0.5px;
+  height: 20px;
+  background-color: #1d251b;
+  z-index: 1;
 }
 
 @media (max-width: 840px) {
@@ -452,7 +464,7 @@ img {
     width: 100%;
   }
   .content .nav ul div {
-    left: 38vw;
+    left: 33vw;
     top: 410px;
   }
   .content .nav.active {
@@ -580,7 +592,7 @@ img {
     height: 1700px;
   }
   .content .nav ul div {
-    left: 34vw;
+    left: 33vw;
   }
   .content .main .imgTaketurn div {
     height: 250px;
@@ -653,7 +665,7 @@ img {
     height: 1350px;
   }
   .content .nav ul div {
-    left: 26vw;
+    left: 24vw;
   }
   .content .main .remenAnimation .vapour {
     bottom: 105px;

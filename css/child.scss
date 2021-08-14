@@ -1,0 +1,223 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+img{vertical-align: top;border: none;}
+
+.wrap{
+    a{
+        text-decoration: none;
+    }
+    a:link{
+        color: #1d251b;
+    }
+    a:visited{
+        color: #1d251b;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    z-index: 10;
+    border-bottom: 1px solid #744b34;
+    background-color: white;
+    a{
+        display: block;
+        width: 207px;
+        overflow: hidden;
+        white-space: nowrap;
+        img{
+            margin-left: 20px;
+            height: 50px;
+        }
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .button::before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3.15px;
+        background-color: #744b34;
+        transform: translateY(10px);
+    }
+    .button::after{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3.15px;
+        background-color: #744b34;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 0 #744b34;
+    }
+}
+.content{
+    
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 0;
+        height: 100vh;
+        background:url(../img/bg1.png);
+        border-right: #744b34 1px solid;
+        transition: width 0.5s, left 0.5s;
+        overflow: hidden;
+        z-index: 9;
+        ul{
+            position: relative;
+            width: 100%;
+            left: 30px;
+            white-space: nowrap;
+            li{
+                color: #744b34;
+                a{
+                    display: block;
+                    padding: 10px;
+                }
+            }
+            div{
+                position: absolute;
+                left: 69.5px;
+                top: 410px;
+                font-size: 14px;
+            }
+        }
+        a{
+            color: #a7755a;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        a:link{
+            color: #a7755a;
+        }
+        a:visited{
+            color: #a7755a;
+        }
+        a:hover{
+            color: #744b34;
+        }
+    }
+    .nav.active{
+        width: calc(300px);
+    }
+    .main{
+        position: absolute;
+        right: 0px;
+        padding-top: 63px;
+        width: calc(100%);
+        transition: width 0.5s ,left 0.5s;
+        z-index: 8;
+        .inside{
+            background-color: #ffefcc;
+            height: 800px;
+        }
+        .footer{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            ul{
+                display: flex;
+                li{
+                    a{
+                        display: block;
+                        padding: 0 5px ;
+                    }
+                    .rightBorder{
+                        border-right: 1px solid #1d251b;
+                    }
+                }
+            }
+            div{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 35px;
+                background-color: #a7755a;
+                img{
+                    width: 16px;
+                }
+                i{
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    bottom: 0px;
+                    background-color: #744b34;
+                }
+            }
+        }
+    }
+    .main.active{
+        width: calc(100% - 300px);
+    }
+}
+
+
+//讓nav縮小但字不動的用法是:ul得跟nav(父層)一樣大，這是主因也是唯一原因。
+//main使用position: absolute;的原因是要讓畫面從左邊或右邊固定，當縮小的時候才會從左邊縮小
+//此版本是從右邊固定，左邊固定參考index.html
+
+
+// rwd 介面切換
+
+@media (max-width:840px) {
+    
+    .content{
+        // overflow: hidden;
+        .nav{
+            left: -100%;
+            width: calc(100%);//此處不能用vw會造成錯誤
+            ul{
+                div{
+                    left: 33vw !important;
+                }
+            }
+        }
+        .nav.active{
+            left: 0;
+            width: calc(100%);
+        }
+        .main{
+            left: 0;
+            transition: all 0.5s;
+        }
+        .main.active
+        {
+            width: 0;
+            left: 100%;
+            overflow: hidden;
+        }
+    }
+
+}
+//介面切換到此。影響位移的是大小，要讓兩邊都是100%大小才可。
+//當切換到nav時，main內容的大小會影響到nav的大小
+//解決方法一:當切換到nav時main內的物件display:none
+//解決方法二:main屬性上overflow: hidden
+
+@media (max-width:520px){
+
+    .content{
+        .main{
+            .footer{
+                ul{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
