@@ -33,9 +33,9 @@ $(document).ready(function () {
 });
 
 //載入動畫
-// document.onreadystatechange =function(){
-//   let loading = document.querySelector('.planet')
-//   if(document.readyState == 'complete'){
-//       loading.classList.add('active')
-//   }
-// }
+document.onreadystatechange =function(){
+  let loading = document.querySelector('.loading')
+  if(document.readyState == 'complete'){
+      loading.classList.add('active')
+  }
+}

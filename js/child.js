@@ -23,3 +23,48 @@ $(document).ready(function () {
     
 
 });
+
+//載入動畫
+
+document.onreadystatechange =function(){
+    let loading = document.querySelector('.loading')
+    if(document.readyState == 'complete'){
+        loading.classList.add('active')
+    }
+  }
+
+//menu切換
+
+const imgChange = {
+    yaki:'../img/yakiMenu.png',
+    ice:'../img/iceMenu.png',
+    rice:'../img/riceMenu.png',
+    noodle:'../img/menMenu.png',
+}
+let list =document.querySelector('.list')
+
+let yakiId =document.querySelector('#yakiId').onclick =function(e){
+    e.preventDefault()
+    list.innerHTML = `<h3>焼肉のメニュー</h3>
+                      <img src="${imgChange.yaki}" alt="">`
+}
+
+let iceid =document.querySelector('#iceId').onclick =function(e){
+    e.preventDefault()
+    list.innerHTML = `<h3> デザートと飲み物のメニュー</h3>
+                      <img src="${imgChange.ice}" alt="">`
+}
+
+let riceId =document.querySelector('#riceId').onclick =function(e){
+    e.preventDefault()
+    list.innerHTML = `<h3> 定食と丼飯のメニュー</h3>
+                      <img src="${imgChange.rice}" alt="">`
+}
+
+let noodleId =document.querySelector('#noodleId').onclick =function(e){
+    e.preventDefault()
+    list.innerHTML = `<h3> スープと麺類のメニュー</h3>
+                      <img src="${imgChange.noodle}" alt="">`
+} 
+
+                    
