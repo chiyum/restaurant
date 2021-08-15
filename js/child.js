@@ -6,7 +6,6 @@ function navOpen(e){
     document.body.classList.toggle('active')
     nav.classList.toggle('active')
     main.classList.toggle('active')
-
 }
 
 buttonMenu.addEventListener('click',navOpen)//監聽按鈕
@@ -42,14 +41,14 @@ const imgChange = {
     noodle:'../img/menMenu.png',
 }
 
-let yakiImg = document.querySelector('#yakiImgId').onclick = function(){
+// let yakiImg = document.querySelector('#yakiImgId').onclick = function(){
     
-}
-let yakiId =document.querySelector('#yakiId')
-let iceid =document.querySelector('#iceId')
-let riceId =document.querySelector('#riceId')
-let noodleId =document.querySelector('#noodleId') 
-let list =document.querySelector('.list')
+// }
+// let yakiId =document.querySelector('#yakiId')
+// let iceid =document.querySelector('#iceId')
+// let riceId =document.querySelector('#riceId')
+// let noodleId =document.querySelector('#noodleId') 
+// let list =document.querySelector('.list')
 
 // // list.innerHTML = `<img src="${imgChange.yaki}" alt="">`
 // function update(e){

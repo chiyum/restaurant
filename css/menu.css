@@ -176,6 +176,7 @@ body, html {
   transition: width 0.5s ,left 0.5s;
   white-space: nowrap;
   z-index: 8;
+  overflow: hidden;
 }
 
 .content .main .inside .titleImg {
@@ -536,6 +537,9 @@ body, html {
   body.active {
     overflow: hidden;
   }
+  .content {
+    overflow: hidden;
+  }
   .content .nav {
     left: -100%;
     width: 100%;
@@ -554,7 +558,7 @@ body, html {
     transition: all 0.5s;
   }
   .content .main.active {
-    width: 100vw;
+    width: 100%;
     left: 100%;
     overflow: hidden;
   }
