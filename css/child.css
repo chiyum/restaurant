@@ -166,13 +166,12 @@ img {
   position: absolute;
   right: 0px;
   padding-top: 63px;
-  width: 100%;
+  width: calc(100%);
   background-color: #ffefcc;
   -webkit-transition: width 0.5s ,left 0.5s;
   transition: width 0.5s ,left 0.5s;
   white-space: nowrap;
   z-index: 8;
-  overflow: hidden;
 }
 
 .content .main .inside .titleImg {
@@ -315,7 +314,7 @@ img {
 
 .content .main .inside .menu .list .commodity {
   margin-bottom: 50px;
-  width: 80%;
+  width: 75vw;
 }
 
 .content .main .inside .menu .list .commodity img {
@@ -491,6 +490,9 @@ img {
 }
 
 @media (max-width: 840px) {
+  body.active {
+    overflow: hidden;
+  }
   .content .nav {
     left: -100%;
     width: 100%;
@@ -512,7 +514,7 @@ img {
     background: url(../img/bg1.png);
   }
   .content .main.active {
-    width: 100%;
+    width: 100vw;
     left: 100%;
     overflow: hidden;
   }

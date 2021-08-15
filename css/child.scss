@@ -1,7 +1,6 @@
 *{margin: 0;padding: 0;}
 li{list-style: none;}
 img{vertical-align: top;border: none;}
-
 .wrap{
     a{
         text-decoration: none;
@@ -12,6 +11,7 @@ img{vertical-align: top;border: none;}
     a:visited{
         color: #1d251b;
     }
+    // overflow: hidden;
 }
 
 .header{
@@ -61,7 +61,8 @@ img{vertical-align: top;border: none;}
     }
 }
 .content{
-    
+    // overflow: hidden;
+    // position: relative;
     .nav{
         display: flex;
         flex-direction: column;
@@ -114,14 +115,14 @@ img{vertical-align: top;border: none;}
     }
     .main{
         position: absolute;
-        right: 0px;
+        right: 0px; //似乎是這裡始終要一致，才不會產生bug
+        // left: 0;
         padding-top: 63px;
-        width: 100%;
+        width: calc(100%);
         background-color: #ffefcc;
         transition: width 0.5s ,left 0.5s;
         white-space: nowrap;
         z-index: 8;
-        overflow: hidden;
         .inside{
             // width: 100vw;
             .titleImg{
@@ -204,7 +205,7 @@ img{vertical-align: top;border: none;}
                         transition: all 0.5s;
                     }
                 }
-                .list{
+                .list{ 
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -217,10 +218,9 @@ img{vertical-align: top;border: none;}
                         color:#1d251b ;
                     }
                     .commodity{
-                        // position: relative;
                         margin-bottom: 50px;
-                        width: 80%;
-                        img{
+                        width: 75vw;
+                        img{//造成畫面不和諧的原因 寬度不能用% //外層用body內層就無仿
                             border: 1px solid;
                             width: 100%;
                         }
@@ -229,27 +229,6 @@ img{vertical-align: top;border: none;}
                             color: red;
                             font-weight: 500;
                         }
-                        // div{
-                        //     position: absolute;
-                        //     bottom: 0;
-                        //     left: 0;
-                        //     display: flex;
-                        //     justify-content: center;
-                        //     align-items: center;
-                        //     width: 100vw;
-                        //     height: 100vh;
-                        //     background-color: rgba(55, 55, 55, 0.9);
-                        //     img{
-                        //         width: 85%;
-                        //     }
-                        //     span{
-                        //         position: relative;
-                        //         bottom: 250px;
-                        //         left: 30px;
-                        //         font-size: 50px;
-                        //         color: white;
-                        //     }
-                        // }
                     }
                     
                 }
@@ -384,9 +363,11 @@ img{vertical-align: top;border: none;}
 // rwd 介面切換
 
 @media (max-width:840px) {
+    body.active{
+        overflow: hidden; //當切換成nav時切換成此的話，nav就不會有多餘的畫面了
+    }
     
     .content{
-        // overflow: hidden;
         .nav{
             left: -100%;
             width: 100%;//此處不能用vw會造成錯誤
@@ -402,7 +383,7 @@ img{vertical-align: top;border: none;}
             width: 100%;
         }
         .main{
-            // width: 100%;
+            // width: 0;
             left: 0;
             transition: all 0.5s;
             .inside{
@@ -413,7 +394,7 @@ img{vertical-align: top;border: none;}
         }
         .main.active
         {
-            width: 100%;
+            width: 100vw;
             left: 100%;
             overflow: hidden;
         }

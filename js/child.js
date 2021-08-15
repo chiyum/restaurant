@@ -2,11 +2,11 @@
 let main = document.querySelector('.main');//主畫面
 let nav = document.querySelector('.nav')//左邊選單
 let buttonMenu = document.querySelector('.button')//選單按鈕
-
 function navOpen(e){
-
+    document.body.classList.toggle('active')
     nav.classList.toggle('active')
     main.classList.toggle('active')
+
 }
 
 buttonMenu.addEventListener('click',navOpen)//監聽按鈕
@@ -51,8 +51,8 @@ let riceId =document.querySelector('#riceId')
 let noodleId =document.querySelector('#noodleId') 
 let list =document.querySelector('.list')
 
-// list.innerHTML = `<img src="${imgChange.yaki}" alt="">`
-function update(e){
-    e.preventDefault()
-}
+// // list.innerHTML = `<img src="${imgChange.yaki}" alt="">`
+// function update(e){
+//     e.preventDefault()
+// }
 
