@@ -416,16 +416,19 @@ body,html{
         .nav.active{
             left: 0;
             width: 100%;
+            
         }
         .main{
             left: 0;
-            transition: all 0.5s;
+            
         }
         .main.active
         {
+            position: fixed;
             width: 100vw;
             left: 100%;
             overflow: hidden;
+            
         }
     }
 

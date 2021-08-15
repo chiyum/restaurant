@@ -383,6 +383,7 @@ img{vertical-align: top;border: none;}
         }
         .main.active
         {
+            position: fixed;
             width: 100vw;
             left: 100%;
             overflow: hidden;

@@ -499,6 +499,7 @@ img {
     transition: all 0.5s;
   }
   .content .main.active {
+    position: fixed;
     width: 100vw;
     left: 100%;
     overflow: hidden;
