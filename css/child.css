@@ -166,11 +166,13 @@ img {
   position: absolute;
   right: 0px;
   padding-top: 63px;
-  width: calc(100%);
+  width: 100%;
   background-color: #ffefcc;
   -webkit-transition: width 0.5s ,left 0.5s;
   transition: width 0.5s ,left 0.5s;
+  white-space: nowrap;
   z-index: 8;
+  overflow: hidden;
 }
 
 .content .main .inside .titleImg {
@@ -304,7 +306,6 @@ img {
           align-items: center;
   margin-top: 50px;
   border-top: 1px #744b34 solid;
-  background-color: #ffefcc;
 }
 
 .content .main .inside .menu .list h3 {
@@ -492,21 +493,26 @@ img {
 @media (max-width: 840px) {
   .content .nav {
     left: -100%;
-    width: calc(100%);
+    width: 100%;
+    overflow: hidden;
   }
   .content .nav ul div {
     left: 33vw !important;
   }
   .content .nav.active {
     left: 0;
-    width: calc(100%);
+    width: 100%;
   }
   .content .main {
     left: 0;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
+  .content .main .inside .menu {
+    background: url(../img/bg1.png);
+  }
   .content .main.active {
+    width: 100%;
     left: 100%;
     overflow: hidden;
   }
@@ -534,6 +540,9 @@ img {
 }
 
 @media (max-width: 890px) {
+  .content .main .inside .titleImg {
+    height: 40vh;
+  }
   .content .main .inside .menu .menulist a div p {
     width: 100%;
   }
