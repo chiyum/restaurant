@@ -13,6 +13,10 @@ img {
   border: none;
 }
 
+body, html {
+  scroll-behavior: smooth;
+}
+
 .wrap a {
   text-decoration: none;
 }
@@ -175,6 +179,7 @@ img {
 }
 
 .content .main .inside .titleImg {
+  display: none;
   margin-top: -2px;
   height: 60vh;
 }
@@ -186,11 +191,10 @@ img {
 
 .content .main .inside .menu {
   padding: 50px 100px;
-  background-color: white;
 }
 
 .content .main .inside .menu ul {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,7 +206,7 @@ img {
           align-items: center;
   font-size: 30px;
   font-weight: bold;
-  color: #fb6e1c;
+  color: #545853;
 }
 
 .content .main .inside .menu ul li {
@@ -224,8 +228,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #1d251b;
-  font-size: 22px;
+  margin-top: 50px;
+  color: #545853;
+  font-size: 25px;
   font-family: "-apple-system", BlinkMacSystemFont, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "メイリオ", "Hiragino Kaku Gothic ProN", "MS PGothic", Osaka, "sans-serif";
 }
 
@@ -290,6 +295,7 @@ img {
 }
 
 .content .main .inside .menu .list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,17 +310,19 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 50px;
-  border-top: 1px #744b34 solid;
+  padding: 35px 0;
+  border-top: 2px #744b34 solid;
+  border-bottom: 2px #744b34 solid;
 }
 
 .content .main .inside .menu .list h3 {
-  margin: 50px 0px;
-  color: #1d251b;
+  margin-bottom: 50px;
+  color: #545853;
 }
 
 .content .main .inside .menu .list .commodity {
-  margin-bottom: 50px;
-  width: 75vw;
+  margin-bottom: 35px;
+  width: 100%;
 }
 
 .content .main .inside .menu .list .commodity img {
@@ -326,6 +334,41 @@ img {
   text-align: center;
   color: red;
   font-weight: 500;
+}
+
+.content .main .inside .menu .list .iconMenu {
+  position: absolute;
+  top: 25%;
+  left: -6%;
+  width: 15%;
+}
+
+.content .main .inside .menu .list .iconMenu2 {
+  position: absolute;
+  top: -2%;
+  right: 7%;
+  width: 15%;
+}
+
+.content .main .inside .menu .list .iconMenu3 {
+  position: absolute;
+  bottom: 26%;
+  left: 2%;
+  width: 10%;
+}
+
+.content .main .inside .menu .list .iconMenu4 {
+  position: absolute;
+  bottom: -1%;
+  right: -5%;
+  width: 15%;
+}
+
+.content .main .inside .menu .list .iconMenu5 {
+  position: absolute;
+  top: 39%;
+  right: -5%;
+  width: 12%;
 }
 
 .content .main .inside .about {
@@ -392,7 +435,7 @@ img {
 }
 
 .content .main .footer.menuFt {
-  border-top: 1px solid #744b34;
+  border-top: none;
 }
 
 .content .main.active {
@@ -510,9 +553,6 @@ img {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
-  .content .main .inside .menu {
-    background: url(../img/bg1.png);
-  }
   .content .main.active {
     width: 100vw;
     left: 100%;
@@ -526,6 +566,9 @@ img {
   }
   .content .main .inside .menu .menulist a div p {
     width: 100%;
+  }
+  .content .main .inside .menu .list .iconMenu {
+    top: 28%;
   }
 }
 
@@ -548,6 +591,15 @@ img {
   .content .main .inside .menu .menulist a div p {
     width: 100%;
   }
+  .content .main .inside .menu .list .iconMenu {
+    top: 29%;
+  }
+}
+
+@media (max-width: 720px) {
+  .content .main .inside .menu .list .iconMenu {
+    top: 31%;
+  }
 }
 
 @media (max-width: 620px) {
@@ -560,10 +612,6 @@ img {
   .content .main .inside .menu .list h3 {
     margin: 35px 0;
   }
-  .content .main .inside .menu .list .commodity {
-    width: 90%;
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 520px) {
@@ -575,6 +623,14 @@ img {
   }
   .content .main .inside .menu .menulist a div {
     width: 35vw;
+  }
+  .content .main .inside .menu .list .iconMenu {
+    top: 30%;
+  }
+  .content .main .inside .menu .list .iconMenu3 {
+    bottom: 17%;
+    left: -3%;
+    width: 13%;
   }
 }
 /*# sourceMappingURL=child.css.map */

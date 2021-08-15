@@ -1,6 +1,9 @@
 *{margin: 0;padding: 0;}
 li{list-style: none;}
 img{vertical-align: top;border: none;}
+body,html{
+    scroll-behavior: smooth;
+}
 .wrap{
     a{
         text-decoration: none;
@@ -116,7 +119,6 @@ img{vertical-align: top;border: none;}
     .main{
         position: absolute;
         right: 0px; //似乎是這裡始終要一致，才不會產生bug
-        // left: 0;
         padding-top: 63px;
         width: calc(100%);
         background-color: #ffefcc;
@@ -126,6 +128,7 @@ img{vertical-align: top;border: none;}
         .inside{
             // width: 100vw;
             .titleImg{
+                display: none;
                 margin-top: -2px;
                 height: 60vh;
                 img{
@@ -136,16 +139,14 @@ img{vertical-align: top;border: none;}
             //菜單頁
             .menu{
                 padding: 50px 100px;
-                background-color: white;
-                // background: url(../img/bg1.png);
                 ul{
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     font-size:30px;
                     font-weight: bold;
-                    color: #fb6e1c;
+                    color: #545853;
                     li{
                         padding: 5px;
                     }
@@ -158,8 +159,9 @@ img{vertical-align: top;border: none;}
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: #1d251b;
-                    font-size: 22px;
+                    margin-top: 50px;
+                    color: #545853;
+                    font-size: 25px;
                     font-family: "-apple-system", BlinkMacSystemFont, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "メイリオ", "Hiragino Kaku Gothic ProN", "MS PGothic", Osaka, "sans-serif";
                     img{
                         width: 50px;
@@ -206,20 +208,23 @@ img{vertical-align: top;border: none;}
                     }
                 }
                 .list{ 
+                    position: relative;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     margin-top: 50px;
-                    border-top: 1px #744b34 solid;
+                    padding: 35px 0;
+                    border-top: 2px #744b34 solid;
+                    border-bottom: 2px #744b34 solid;
                     // background-color: #ffefcc;
                     h3{
-                        margin:50px 0px;
-                        color:#1d251b ;
+                        margin-bottom:50px;
+                        color:#545853;
                     }
                     .commodity{
-                        margin-bottom: 50px;
-                        width: 75vw;
+                        margin-bottom: 35px;
+                        width: 100%;
                         img{//造成畫面不和諧的原因 寬度不能用% //外層用body內層就無仿
                             border: 1px solid;
                             width: 100%;
@@ -229,6 +234,36 @@ img{vertical-align: top;border: none;}
                             color: red;
                             font-weight: 500;
                         }
+                    }
+                    .iconMenu{
+                        position: absolute;
+                        top: 25%;
+                        left: -6%;
+                        width: 15%;
+                    }
+                    .iconMenu2{
+                        position: absolute;
+                        top: -2%;
+                        right: 7%;
+                        width: 15%;
+                    }
+                    .iconMenu3{
+                        position: absolute;
+                        bottom: 26%;
+                        left: 2%;
+                        width: 10%;
+                    }
+                    .iconMenu4{
+                        position: absolute;
+                        bottom: -1%;
+                        right: -5%;
+                        width: 15%;
+                    }
+                    .iconMenu5{
+                        position: absolute;
+                        top: 39%;
+                        right: -5%;
+                        width: 12%;
                     }
                     
                 }
@@ -283,7 +318,7 @@ img{vertical-align: top;border: none;}
             }
         }
         .footer.menuFt{
-            border-top: 1px solid #744b34;
+            border-top: none;
             // background-color: #ffefcc;
         }
     }
@@ -383,14 +418,8 @@ img{vertical-align: top;border: none;}
             width: 100%;
         }
         .main{
-            // width: 0;
             left: 0;
             transition: all 0.5s;
-            .inside{
-                .menu{
-                    background:url(../img/bg1.png);
-                }
-            }
         }
         .main.active
         {
@@ -420,6 +449,11 @@ img{vertical-align: top;border: none;}
                                     width: 100%;
                                 }
                             }
+                        }
+                    }
+                    .list{
+                        .iconMenu{
+                            top: 28%;
                         }
                     }
                 }
@@ -473,6 +507,11 @@ img{vertical-align: top;border: none;}
                             }
                         }
                     }
+                    .list{
+                        .iconMenu{
+                            top: 29%;
+                        }
+                    }
                 }
             }
         }
@@ -482,25 +521,23 @@ img{vertical-align: top;border: none;}
 
 
 
-// @media (max-width:720px){
+@media (max-width:720px){
 
-// .content{
-//     .main{
-//         .inside{
-//             .menu{
-//                 .menulist{
-//                     a{
-//                         div{
-//                             width: 45vw;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+.content{
+    .main{
+        .inside{
+            .menu{
+                .list{
+                    .iconMenu{
+                        top: 31%;
+                    }
+                }
+            }
+        }
+    }
+}
 
-// }
+}
 
 
 @media (max-width:620px){
@@ -519,10 +556,6 @@ img{vertical-align: top;border: none;}
                     .list{
                         h3{
                             margin: 35px 0;
-                        }
-                        .commodity{
-                            width: 90%;
-                            margin-bottom: 20px;
                         }
                     }
                 }
@@ -551,6 +584,16 @@ img{vertical-align: top;border: none;}
                             div{
                                 width: 35vw;
                             }
+                        }
+                    }
+                    .list{
+                        .iconMenu{
+                           top: 30%;
+                        }
+                        .iconMenu3{
+                            bottom: 17%;
+                            left: -3%;
+                            width: 13%;
                         }
                     }
                 }
