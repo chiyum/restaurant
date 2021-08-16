@@ -126,15 +126,13 @@ body,html{
         white-space: nowrap;
         z-index: 8;
         .inside{
-            // width: 100vw;
-            .titleImg{
-                display: none;
-                margin-top: -2px;
-                height: 60vh;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
+            background: url(../img/bg4.png);
+            .titleBg{
+                background: (url(../img/takeTurnImg.jpg));
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 30vh;
             }
             //菜單頁
             .menu{
@@ -249,8 +247,8 @@ body,html{
                     }
                     .iconMenu3{
                         position: absolute;
-                        bottom: 26%;
-                        left: 2%;
+                        bottom: 21%;
+                        left: 0%;
                         width: 10%;
                     }
                     .iconMenu4{
@@ -261,7 +259,7 @@ body,html{
                     }
                     .iconMenu5{
                         position: absolute;
-                        top: 39%;
+                        top: 50%;
                         right: -5%;
                         width: 12%;
                     }
@@ -514,6 +512,9 @@ body,html{
                         .iconMenu{
                             top: 29%;
                         }
+                        .iconMenu5{
+                            top: 52%;
+                        }
                     }
                 }
             }
@@ -560,6 +561,18 @@ body,html{
                         h3{
                             margin: 35px 0;
                         }
+                        .iconMenu2{
+                            width: 25%;
+                        }
+                        .iconMenu{
+                            width: 31%;
+                            top: 24.5%;
+                            left: -10%;
+                        }
+                        .iconMenu3{
+                            bottom: 21%;
+                            width: 20%;
+                        }
                     }
                 }
             }
@@ -591,12 +604,16 @@ body,html{
                     }
                     .list{
                         .iconMenu{
-                           top: 30%;
+                           top: 24%;
                         }
                         .iconMenu3{
-                            bottom: 17%;
+                            bottom: 19%;
                             left: -3%;
-                            width: 13%;
+                            // width: 13%;
+                        }
+                        .iconMenu5{
+                            width: 20%;
+                            top: 53%;
                         }
                     }
                 }

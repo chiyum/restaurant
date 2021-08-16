@@ -8,6 +8,9 @@ img{vertical-align: top;border: none;}
     position: relative;
     height: 2500px;
 }
+.wrap.aboutHeight{
+    height: 1700px;
+}
 .header{
     position: fixed;
     display: flex;
@@ -138,6 +141,15 @@ img{vertical-align: top;border: none;}
                 font-size: 25px;
             }
         }
+        .imgTaketurn.aboutimg{
+            width: 100vw;
+            .slickBtn{
+                width: 0;
+            }
+            div{
+                height: 92vh;
+            }
+        }
 
         .remenAnimation{
             display: flex;
@@ -248,6 +260,97 @@ img{vertical-align: top;border: none;}
                 a:hover img{
                     opacity: 0.5;
                     transition: all 0.5s;
+                }
+            }
+            
+        }
+        .aboutBg{
+            background: (url(../img/takeTurnImg.jpg));
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 30vh;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            font-family: "-apple-system", BlinkMacSystemFont, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "メイリオ", "Hiragino Kaku Gothic ProN", "MS PGothic", Osaka, "sans-serif";
+            background: url(../img/bg4.png);
+            background-size: contain;
+            h3{
+                position: relative;
+                margin-top: 100px;
+                text-align: center;
+                p:nth-child(1){
+                    font-size: 28px;
+                    color: #fb6e1c;
+                }
+                p:nth-child(2){
+                    color: #868686;
+                }
+            }
+            h3:after{
+                content: url(https://pic03.eapple.com.tw/thinkthink/think_img003.png);
+                position: absolute;
+                top: 35%;
+                left: 120%;
+            }
+            h3::before{
+                content: url(https://pic03.eapple.com.tw/thinkthink/think_img002.png);
+                position: absolute;
+                top: 35%;
+                right: 120%;
+            }
+            img{
+                width: 90%;
+            }
+            .aboutContent{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 100px;
+                padding: 100px 0;
+                width: 90%;
+                background: url(../img/aboutImg.jpg);
+                background-size: cover;
+                div{
+                    padding: 30px;
+                    width: 500px;
+                    color: white;
+                    font-size: 18px;
+                    background: url(../img/bg2.png);
+                    img{
+                        margin: 20px;
+                    }
+                }
+                
+            }
+            .phoneImg{
+                display: none;
+            }
+            .aboutNews{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 100px;
+                width: 100%;
+                div:nth-child(1){
+                    margin-bottom: 30px;
+                    width: 90%;
+                    height: 0.5px;
+                    background-color: #868686;
+                }
+                div:nth-child(5){
+                    margin-top: 30px;
+                    width: 85%;
+                    height: 0.5px;
+                    background-color: #868686;
+                }
+                p{
+                    margin: 10px 0px;
                 }
             }
         }
@@ -421,6 +524,11 @@ img{vertical-align: top;border: none;}
                     height: 300px;
                 }
             }
+            .imgTaketurn.aboutimg{
+                div{
+                    height: 300px;
+                }
+            }
         }
         .main.active{
             left: 0;
@@ -447,6 +555,7 @@ img{vertical-align: top;border: none;}
     .wrap{
         height: 2300px;
     }
+   
     .content{
 
         .main{
@@ -475,6 +584,11 @@ img{vertical-align: top;border: none;}
 
         .main{
             .imgTaketurn{
+                div{
+                    height: 450px;
+                }
+            }
+            .imgTaketurn.aboutimg{
                 div{
                     height: 450px;
                 }
@@ -511,6 +625,11 @@ img{vertical-align: top;border: none;}
                     height: 350px;
                 }
             }
+            .imgTaketurn.aboutimg{
+                div{
+                    height: 350px;
+                }
+            }
         }
 
     }
@@ -529,6 +648,11 @@ img{vertical-align: top;border: none;}
 
         .main{
             .imgTaketurn{
+                div{
+                    height: 300px;
+                }
+            }
+            .imgTaketurn.aboutimg{
                 div{
                     height: 300px;
                 }
@@ -588,6 +712,9 @@ img{vertical-align: top;border: none;}
     .wrap{
         height: 1950px;
     }
+    .wrap.aboutHeight{
+        height: 1950px;
+    }
 
     .content{
 
@@ -595,6 +722,28 @@ img{vertical-align: top;border: none;}
             .remenAnimation{
                 .vapour{
                     bottom: 35px;
+                }
+            }
+            .about{
+                .aboutContent{
+                    margin-top: 0px;
+                    width: 100%;
+                    background: none;
+                    div{
+                        width: 100%;
+                        p{
+                            padding: 0 25px;
+                        }
+                    }
+                    
+                }
+                .phoneImg{
+                    display: block;
+                    margin-top: -100px;
+                    width: 100vw;
+                    img{
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -630,6 +779,7 @@ img{vertical-align: top;border: none;}
                     height: 0;
                 }
             }
+            
             .remenAnimation{
                 .vapour{
                     bottom: 55px;
@@ -673,6 +823,11 @@ img{vertical-align: top;border: none;}
                     height: 250px;
                 }
             }
+            .imgTaketurn.aboutimg{
+                div{
+                    height: 250px;
+                }
+            }
             .menu{
                 .menulist{
                     a{
@@ -687,6 +842,16 @@ img{vertical-align: top;border: none;}
                     bottom: 65px;
                     span{
                         min-width: 6px;
+                    }
+                }
+            }
+            .about{
+                .aboutNews{
+                    p:nth-child(4){
+                        padding: 0 50px;
+                    }
+                    div:nth-child(5){
+                        width: 84%;
                     }
                 }
             }
@@ -754,6 +919,11 @@ img{vertical-align: top;border: none;}
                     height: 200px;
                 }
             }
+            .imgTaketurn.aboutimg{
+                div{
+                    height: 200px;
+                }
+            }
             .menu{
                 .menulist{
                     a{
@@ -775,6 +945,13 @@ img{vertical-align: top;border: none;}
                     bottom: 40px;
                 }
             }
+            .about{
+                .aboutNews{
+                    p:nth-child(4){
+                        padding: 0 30px;
+                    }
+                }
+            }
         }
 
     }
@@ -786,6 +963,23 @@ img{vertical-align: top;border: none;}
     }
 
 }
+
+@media (max-width:376px){
+
+    .content{
+        .main{
+            .about{
+                .aboutNews{
+                    p:nth-child(4){
+                        padding: 0 22px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 
 @media (max-width:360px){
 
@@ -823,6 +1017,13 @@ img{vertical-align: top;border: none;}
                     }
                 }
             }
+            .about{
+                .aboutNews{
+                    p:nth-child(4){
+                        padding: 0 15px;
+                    }
+                }
+            }
         }
         
 
@@ -832,4 +1033,25 @@ img{vertical-align: top;border: none;}
     a{
         right: 6%;
     }
+}
+
+
+@media (max-width:340px){
+
+    .wrap.aboutHeight{
+        height: 2000px;
+    }
+
+    .content{
+        .main{
+            .about{
+                .aboutNews{
+                    p:nth-child(4){
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
 }

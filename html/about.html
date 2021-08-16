@@ -1,56 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>海鮮ゆう</title>
-    <link rel="stylesheet" href="../css/child.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="shortcut icon" href="../img/Icon.png">
+    <meta name='description' content='ゆう海鮮'>
+    <meta property="og:title" content="いつでも待っていて温かい料理です
+    海鮮、焼肉、丼物、ラーメン、お弁当など料理を販売します">
+    <meta property="og:description" content="ゆう海鮮はいつでも待っていて温かい料理です
+    海鮮、焼肉、丼物、ラーメン、お弁当など料理を販売します">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chiyum.github.io/restaurant/">
+    <meta property="og:image" content="https://chiyum.github.io/restaurant/img/yuulonglogo.png">
+    <link href="./img/Icon.png" rel="apple-touch-icon">
+    <meta name="keywords" content="ゆう海鮮, 海鮮ゆう, Kaisen Yuu, Yuu Kaisen, 海鮮, 焼肉, 丼物, ラーメン, お弁当, 氣仙沼, 氣仙沼料理 , 大島, 大島料理, おいしい, 美味しい ,うまい">
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap aboutHeight">
         <div class="header">
-            <a href="../index.html">
-                <img src="../img/yuulonglogo.png" alt="logo">
-                kaisen Yuu 海鮮ゆう
-            </a>
-            <div class="button"></div>
+            <a href="../index.html"><img src="../img/yuulonglogo.png" alt="logo">ゆう海鮮 kaisen Yuu</a>
+            <!-- buttonIcon -->
+            <div class="button">
+                <div class="lineI"></div>
+                <div class="lineII"></div>
+                <div class="lineIII"></div>
+            </div>
         </div>
+        <!-- head -->
         <div class="content">
-            <div class="nav">
+            <div class="nav active">
                 <ul>
                     <li><a href="../index.html">ホーム</a></li>
                     <li><a href="./menu.html">メニュー</a></li>
                     <li><a href="./about.html">ゆうについて</a></li>
                     <li><a href="./news.html">店舗のご案内</a></li>
                     <div>
-                        <a href="https://chiyum.github.io/restaurant/">日本語</a>
-                        <a href="https://chiyum.github.io/restaurantChinese/">繁體中文</a>
+                        <a href="#">日本語</a>
+                        <a href="#">繁體中文</a>
                     </div>
                 </ul>
             </div>
-            <div class="main">
-                <div class="inside">
-                    about
-                </div>
-                <div class="footer">
-                    <ul>
-                        <li><a href="#">日本語</a></li>
-                        <li class="lineFt"></li>
-                        <li><a href="#">繁體中文</a></li>
-                    </ul>
-                    <p>Copyright © 2021 kaisen Yuu</p>
-                    <div class="gotopClass">
-                        <i></i>
-                        <img src="../img/up.png" alt="go to top">
+            <!-- main -->
+            <div class="main active">
+            <div class="aboutBg"></div>
+              <div class="about">
+                    <h3>
+                        <p>ゆうについて</p>
+                        <p>About us</p>
+                    </h3>
+                    <div class="aboutContent">
+                        <div>
+                            <img src="../img/aboutFont.png" alt="word">
+                            <p>
+                            『海鮮ゆう』は、レインズインターナショナルが1996年に、東京で創業した焼肉レストランのブランドです。
+                            創業以前、日本の焼肉市場には個人店が多く、チェーン店には「美味しくても高い店」か「安いだけの食べ放題」は存在していましたが、
+                            安くて美味しいチェーン店はありませんでした。
+                            このような環境で、どこでも誰でも気軽に来店できて美味しい焼肉が食べられる店の潜在ニーズを発掘し、
+                            低価格で美味しい商品を提供することにこだわり、市場を開拓しました。
+                            『牛角』は、レインズインターナショナルが1996年に、東京で創業した、焼肉レストランのブランドです。
+                            現在では、日本に600店舗、海外に150店舗以上をもつ、日本で最大の焼肉レストランチェーンへ成長しました。
+                        </p>
+                        </div>
                     </div>
-                </div>
+                    <div class="phoneImg">
+                        <img src="../img/phimg.png" alt="foodPicture">
+                    </div>
+                    <div class="aboutNews">
+                        <div></div>
+                        <p>住所: 〒988-0604 宮城県気仙沼市廻舘115</p>
+                        <p>電話番號:+81 - 226 - 262 - 011</p>
+                        <p>営業時間:
+                            午前 11:30～14:00 / 午後 17:00～23:00 / 定休日は水曜日</p>
+                        <div></div>
+                    </div>
+              </div>
+        </div>
+        <div class="footer">
+            <ul>
+                <li><a href="#" id="rightborder">日本語</a></li>
+                <li class="lineFt"></li>
+                <li><a href="#">繁體中文</a></li>
+            </ul>
+            <p>Copyright © 2021 kaisen Yuu</p>
+            <a href="#" id="gototopId">
+                <i></i>
+                <img src="../img/up.png" alt="go to top">
+            </a>
+        </div>
+        <div class="loading">
+            <img src="../img/yuulogoIcon.png" alt="">
+            <div class="continent">
+                <h2>料理中...</h2>
             </div>
         </div>
-        
     </div>
     <!-- js -->
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/child.js"></script>
+    <script src="../js/all.js"></script>
+    <script src="../js/slick.js"></script>
 </body>
 </html>
