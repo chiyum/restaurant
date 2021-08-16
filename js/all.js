@@ -29,7 +29,6 @@ $(document).ready(function () {
       e.preventDefault()
       $('html,body').animate({scrollTop:0},555)
     })
-    console.log(document.querySelector('#gototop'))
 });
 
 //載入動畫
@@ -38,4 +37,12 @@ document.onreadystatechange =function(){
   if(document.readyState == 'complete'){
       loading.classList.add('active')
   }
+}
+
+
+//暫時
+let chinese = document.querySelectorAll('.nav ul div a')
+chinese[1].onclick = function(e){
+    e.preventDefault()
+    alert('建ています,まだ完成しません~')
 }

@@ -123,10 +123,13 @@ body,html{
         width: calc(100%);
         background-color: #ffefcc;
         transition: width 0.5s ,left 0.5s;
+        transition: all 0.5s;
         white-space: nowrap;
         z-index: 8;
         .inside{
+            margin-top: -2px;
             background: url(../img/bg4.png);
+            overflow: hidden;
             .titleBg{
                 background: (url(../img/takeTurnImg.jpg));
                 background-size: cover;
@@ -321,7 +324,9 @@ body,html{
         }
     }
     .main.active{
-        width: calc(100% - 300px);
+        // width: calc(100% - 300px);
+        right: -300px;
+        transition: all 0.5s;
     }
 }
 

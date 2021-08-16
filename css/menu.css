@@ -174,12 +174,16 @@ body, html {
   background-color: #ffefcc;
   -webkit-transition: width 0.5s ,left 0.5s;
   transition: width 0.5s ,left 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   white-space: nowrap;
   z-index: 8;
 }
 
 .content .main .inside {
+  margin-top: -2px;
   background: url(../img/bg4.png);
+  overflow: hidden;
 }
 
 .content .main .inside .titleBg {
@@ -440,7 +444,9 @@ body, html {
 }
 
 .content .main.active {
-  width: calc(100% - 300px);
+  right: -300px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .loading {

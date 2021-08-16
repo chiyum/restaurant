@@ -41,17 +41,9 @@ const imgChange = {
     noodle:'../img/menMenu.png',
 }
 
-// let yakiImg = document.querySelector('#yakiImgId').onclick = function(){
-    
-// }
-// let yakiId =document.querySelector('#yakiId')
-// let iceid =document.querySelector('#iceId')
-// let riceId =document.querySelector('#riceId')
-// let noodleId =document.querySelector('#noodleId') 
-// let list =document.querySelector('.list')
-
-// // list.innerHTML = `<img src="${imgChange.yaki}" alt="">`
-// function update(e){
-//     e.preventDefault()
-// }
-
+//暫時
+let chinese = document.querySelectorAll('.nav ul div a')
+chinese[1].onclick = function(e){
+    e.preventDefault()
+    alert('建ています,まだ完成しません~')
+}

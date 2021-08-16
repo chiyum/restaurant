@@ -179,6 +179,10 @@ img {
   z-index: 8;
 }
 
+.content .main .inside {
+  margin-top: -2px;
+}
+
 .content .main .inside .titleBg {
   background: url(../img/takeTurnImg.jpg);
   background-size: cover;

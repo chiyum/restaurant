@@ -125,6 +125,7 @@ img{vertical-align: top;border: none;}
         overflow: hidden;
         z-index: 8;
         .inside{
+            margin-top: -2px;
             //店鋪案內
             .titleBg{
                 background: (url(../img/takeTurnImg.jpg));
