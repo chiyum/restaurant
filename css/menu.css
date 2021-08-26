@@ -459,7 +459,7 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   color: #f86e1d;
