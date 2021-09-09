@@ -1,6 +1,6 @@
 const menuBtn = document.querySelector('.button')
 
-
+//選單
 function menuClose(){
     let nav = document.querySelector('.nav')
     let main = document.querySelector('.main')
@@ -14,7 +14,7 @@ menuBtn.addEventListener('click',menuClose,false)
 
 
 $(document).ready(function () {
-    $('.imgTaketurn').slick({
+    $('.imgTaketurn').slick({//輪播
       autoplay: true,
       // dots:true,
       infinite:true,
@@ -25,7 +25,7 @@ $(document).ready(function () {
       prevArrow: "<button type='button' class='slick-prev slick-arrow slickBtn''></button>",
          nextArrow: "<button type='button' class='slick-next slick-arrow slickBtn''></button>",
     })
-    $('#gototopId').click(function(e){
+    $('#gototopId').click(function(e){//回到頂端
       e.preventDefault()
       $('html,body').animate({scrollTop:0},555)
     })
