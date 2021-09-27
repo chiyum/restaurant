@@ -177,7 +177,7 @@ img {
 
 .content .main .imgTaketurn div {
   width: 100%;
-  height: 550px;
+  height: 650px;
 }
 
 .content .main .imgTaketurn div img {
@@ -724,6 +724,9 @@ img {
 @media (max-width: 1295px) {
   .wrap {
     height: 2300px;
+  }
+  .content .main .imgTaketurn div {
+    height: 600px;
   }
   .content .main .remenAnimation .vapour span {
     min-width: 9px;
